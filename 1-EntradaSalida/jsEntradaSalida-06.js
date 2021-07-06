@@ -4,7 +4,7 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	var numero1, numero2, resultado;
+let numero1, numero2, resultado;
 
 	numero1 = document.getElementById("txtIdNumeroUno").value;
 	numero2 = document.getElementById("txtIdNumeroDos").value;
