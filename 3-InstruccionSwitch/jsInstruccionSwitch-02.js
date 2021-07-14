@@ -11,22 +11,14 @@ function mostrar()
 		case "Marzo":
 		case "Abril":
 		case "Mayo":
+		case "Junio":
 			alert("Falta para el invierno.");
 			break;
-		case "Junio":
 		case "Julio":
 		case "Agosto":
 			alert("Abrigate que hace frio.");
 			break;
-		case "Septiembre":
-		case "Octubre":
-		case "Noviembre":
-		case "Diciembre":
+		default:
 			alert("Ya pasamos el frio, ahora calor!!!.");
-			break;
 	}
-
-
-
-
 }//FIN DE LA FUNCIÓN

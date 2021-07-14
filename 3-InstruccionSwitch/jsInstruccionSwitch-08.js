@@ -9,10 +9,8 @@ function mostrar()
 		case "Ushuaia":
 			alert("En su destino hace frio.");
 			break;
-		case "Cataratas":
-		case "Mar del plata":
+		default:
 			alert("En su destino hace calor.");
-			break;
 	}
 
 }//FIN DE LA FUNCIÓN

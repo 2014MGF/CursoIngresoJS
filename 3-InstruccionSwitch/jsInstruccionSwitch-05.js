@@ -15,7 +15,6 @@ function mostrar()
 			break;
 		default:
 			alert("No es de mañana.");
-			break;
 	}
 	
 
