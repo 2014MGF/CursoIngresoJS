@@ -3,8 +3,6 @@ function mostrar()
 	let estacion, 
 		destino, 
 		tarifa, 
-		aumento, 
-		descuento, 
 		resultado;
 
 	estacion = document.getElementById("txtIdEstacion").value;
@@ -15,60 +13,39 @@ function mostrar()
 	switch(destino){
 		case "Bariloche":
 			if (estacion == "Invierno") {
-				aumento = tarifa * 0.20;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.20;
 			} else if (estacion == "Verano") {
-				descuento = tarifa * 0.20;
-				resultado = tarifa - descuento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa - tarifa * 0.20;
 			} else {
-				aumento = tarifa * 0.10;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.10;
 			}
 		break;
 		case "Mar del plata":
 			if (estacion == "Verano") {
-				aumento = tarifa * 0.20;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.20;
 			} else if (estacion == "Invierno") {
-				descuento = tarifa * 0.20;
-				resultado = tarifa - descuento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa - tarifa * 0.20;
 			} else {
-				aumento = tarifa * 0.10;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.10;
 			}
 		break;
 		case "Cordoba":
 			if (estacion == "Verano") {
-				aumento = tarifa * 0.10;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.10;
 			} else if (estacionAño == "Invierno") {
-				descuento = tarifa * 0.10;
-				resultado = tarifa - descuento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa - tarifa * 0.10;
 			} else {
-				alert("La tarifa es: "+tarifa);
+				resultado = tarifa;
 			}
 		break;
 		default:
 			if (estacion == "Verano") {
-				aumento = tarifa * 0.10;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.10;
 			} else if (estacion == "Invierno") {
-				descuento = tarifa * 0.10;
-				resultado = tarifa - descuento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa - tarifa *0.10;
 			} else {
-				aumento = tarifa * 0.10;
-				resultado = tarifa + aumento;
-				alert("La tarifa es: "+resultado);
+				resultado = tarifa + tarifa * 0.10;
 			}
 	}
+	alert("El precio final es $ " + resultado);
 }//FIN DE LA FUNCIÓN
