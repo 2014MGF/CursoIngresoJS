@@ -10,5 +10,59 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	let precio = 35,
+        precioFinal,
+        marca,
+        cantidad,
+        ingresoBruto;
+
+    cantidad = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
+
+    if (cantidad >= 6) {
+        precioFinal = precio * cantidad * 0.50;
+    } else {
+        switch(marca){
+            case "ArgentinaLuz":
+                if (cantidad == 5) {
+                   precioFinal = precio * cantidad * 0.60;
+                } else if (cantidad == 4){
+                    precioFinal = precio * cantidad * 0.75;
+                } else if (cantidad == 3){
+                    precioFinal = precio * cantidad * 0.85;
+                } else{
+                    precioFinal = precio * cantidad;
+                }
+                break;
+            case "FelipeLamparas":
+                if (cantidad == 5) {
+                    precioFinal = precio * cantidad * 0.70;
+                } else if (cantidad == 4){
+                    precioFinal = precio * cantidad * 0.75;
+                } else if (cantidad == 3){
+                    precioFinal = precio * cantidad * 0.90;
+                } else{
+                    precioFinal = precio * cantidad;
+                }
+                break;
+            default:
+                if (cantidad == 5) {
+                    precioFinal = precio * cantidad * 0.70;
+                } else if (cantidad == 4){
+                    precioFinal = precio * cantidad * 0.80;
+                } else if (cantidad == 3){
+                    precioFinal = precio * cantidad * 0.95;
+                } else{
+                    precioFinal = precio * cantidad;
+                }
+        }
+    }
+    
+    if(precioFinal < 120){
+        document.getElementById("txtIdprecioDescuento").value = precioFinal;
+    } else{
+        ingresoBruto = precioFinal * 0.10;
+        document.getElementById("txtIdprecioDescuento").value = precioFinal;
+        alert("Usted pago: $ " + ingresoBruto + " de IIBB.");
+    }
 }
