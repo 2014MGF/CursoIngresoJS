@@ -32,13 +32,13 @@ function mostrar()
 		case "Cordoba":
 			if (estacion == "Verano") {
 				resultado = tarifa + tarifa * 0.10;
-			} else if (estacionAño == "Invierno") {
+			} else if (estacion == "Invierno") {
 				resultado = tarifa - tarifa * 0.10;
 			} else {
 				resultado = tarifa;
 			}
 		break;
-		default:
+		case "Cataratas":
 			if (estacion == "Verano") {
 				resultado = tarifa + tarifa * 0.10;
 			} else if (estacion == "Invierno") {
@@ -46,6 +46,7 @@ function mostrar()
 			} else {
 				resultado = tarifa + tarifa * 0.10;
 			}
+			break;
 	}
 	alert("El precio final es $ " + resultado);
 }//FIN DE LA FUNCIÓN
