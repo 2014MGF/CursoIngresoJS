@@ -7,8 +7,7 @@ function mostrar()
 	sexoIngresado = prompt("ingrese f ó m .");
 
 	while(sexoIngresado != "f" && sexoIngresado != "m"){
-		alert("Error, reintente.");
-		sexoIngresado = prompt("ingrese f ó m .");
+		sexoIngresado = prompt("Error. Reingrese f ó m .");
 	}
 	if (sexoIngresado == "f") {
 		sexoIngresado = "Femenino";

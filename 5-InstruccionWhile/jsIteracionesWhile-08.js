@@ -4,23 +4,26 @@ sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
 	let numero,
-		negativo=-1,
+		negativo=1,
 		positivo=0,
-		promedio,
-		respuesta = "si";
+		flag=1,
+		respuesta;
 
-	respuesta = prompt("Quiere ingresar un número? si/no");
-
-	while(respuesta == "si"){
+	do{
 		numero = parseInt(prompt("Ingrese un número:"));
 		
-		if (numero > 0) {
+		if (numero >= 0) {
 			positivo += numero;
 		} else {
 			negativo *= numero;
+			flag = 0;
 		}
+		respuesta = prompt("Quiere ingresar un número? si/no").toLowerCase();
+	}
+	while(respuesta == "si")
 
-		respuesta = prompt("Quiere ingresar un número? si/no");
+	if (flag){
+		negativo = 0;
 	}
 	document.getElementById("txtIdSuma").value = positivo;
 	document.getElementById("txtIdProducto").value = negativo;

@@ -40,5 +40,7 @@ function mostrar()
   precioTotal = precioArena + precioCal + precioCemento;
 	if (cantidadTotal > 30){
     totalBruto = precioTotal * 0.75;
-  } else if (){}
+  } else if (cantidadTotal > 10 && cantidadTotal < 30){
+    totalBruto = precioTotal * 0.85;
+  }
 }

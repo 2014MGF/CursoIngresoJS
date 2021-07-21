@@ -2,24 +2,23 @@
 Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
 e informar la suma acumulada y el promedio.
 */
-function mostrar()
-{
+function mostrar() {
 	let numero,
-		i=0,
-		suma=0,
+		contador = 0,
+		acumulador = 0,
 		promedio,
-		respuesta = "si";
+		respuesta;
 
-	respuesta = prompt("Quiere ingresar un número? si/no");
-
-	while(respuesta == "si"){
+	do {
 		numero = parseInt(prompt("Ingrese un número:"));
-		suma += numero;
-		i ++;
-		respuesta = prompt("Quiere ingresar un número? si/no");
+		acumulador += numero;
+		contador++;
+		respuesta = prompt("Quiere ingresar un número? si/no").toLowerCase();
 	}
-	promedio = suma/i;
-	document.getElementById("txtIdSuma").value = suma;
+	while (respuesta == "si");
+
+	promedio = acumulador / contador;
+	document.getElementById("txtIdSuma").value = acumulador;
 	document.getElementById("txtIdPromedio").value = promedio;
 
 }//FIN DE LA FUNCIÓN
